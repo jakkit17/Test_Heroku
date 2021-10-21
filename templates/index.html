@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+	<img src="{{url_for('static', filename='images/CodeGenius_logo_300.png')}}">
+	<p> Flask Test<br>by Jakkit Nimsuwan from Code Genius </p>
+
+	<hr>
+	<form action="greet" method="post">
+	 	{% for message in get_flashed_messages()%}
+	 		<p>{{message}}</p>
+	 	{% endfor %}
+	 	Answer : 
+		<input type="text" name="name_input">
+		<input type="submit" value="Click Me" id="greet_me">
+	</form>
+</body>
+</html>
