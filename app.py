@@ -14,6 +14,9 @@ def greet():
 	flash("Hi, " + str(request.form['name_input']) +". Nice to meet you.")
 	return render_template("index.html")
 
+@app.route("/int2308")
+def int2308():
+	return render_template("int2308.html")
 
 # Fix error 500 - Set the secret_key
 if __name__ == '__main__':
